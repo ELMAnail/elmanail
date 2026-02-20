@@ -1,0 +1,205 @@
+
+/* 基本フォント（英語・数字） */
+body {
+
+  /* 背景画像 */
+  background: url("image/background.jpg") center/cover no-repeat fixed;
+  background-size: cover;
+
+font-family: 'Cinzel', serif;
+  text-align: center;
+  color: #333;
+}
+
+/* 日本語だけ明朝体 */
+:lang(ja) {
+font-family: 'Shippori Mincho', serif;
+  text-align: center;
+  color: #333;
+}
+
+
+
+section{
+margin-bottom: 35px;
+}
+
+/* 白背景コンテンツ */
+.container{
+  max-width: 480px;
+  background: rgba(255,255,255,0.6);
+  margin: 20px auto;
+  padding: 30px 22px;
+  border-radius: 12px;
+}
+
+/* タイトル */
+.logo {
+text-align: center;
+margin-bottom: 10px;
+}
+
+.logo img {
+height: 90px; /* ←縦横比を保持 */
+width: auto;
+max-width: 100%;
+display: block;
+margin: 0 auto;
+}
+
+/* 見出し */
+   h2{
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+/* 説明文 */
+   p{
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ギャラリー共通 */
+   .gallery{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+　.gallery img{
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* 3枚並び */
+.gallery.three img{
+   width: 30%;
+   aspect-ratio: 1 / 1;
+}
+
+/* 2枚並び */
+.gallery.two img{
+   width: 45%;
+   aspect-ratio: 1 / 1;
+}
+
+/* Instagram連絡ボタン */
+.contact-bth{
+   display: inline-block;
+   margin-top: 10px;
+   padding: 12px 18px;
+   background: #333;
+   color: white;
+   text-decoration: none;
+   border-radius: 30px;
+   font-size: 14px;
+}
+
+.contact-bth:hover{
+   opacity: 0.8;
+}
+
+/* ホットペッパー横長 */
+.hotpepper img{
+   width: 60px;
+   height: auto;
+   margin-top: 10px;
+}
+
+/* SNSアイコン */
+.sns-icons{
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   margin-top: 18px;
+}
+
+.sns-icons img{
+   width: 40px;
+   height: 40px;
+   object-fit: contain;
+   transition: 0.2s;
+}
+
+.sns-icons img:hover{
+   transform: scale(1.15);
+}
+
+
+
+
+/* ===== フッター ===== */
+
+footer{
+  background: transparent;
+  padding: 30px 22px;
+  text-align: center;
+  font-size: 10px;
+}
+
+@media (max-width: 450px){
+
+body{
+font-size: 13px;
+line-height: 1.8;
+}
+
+h2{
+font-size: 15px;
+margin-top: 35px;
+}
+
+p{
+font-size: 11px;
+line-height: 1.95;
+padding: 0 4px;
+}
+
+.container{
+padding: 26px 18px;
+}
+
+.sns-icons img{
+width: 34px;
+height: 34px;
+}
+
+.hotpepper img{
+width: 55px;
+}
+
+}
+
+@media (min-width: 768px) {
+body {
+font-size: 16px; /* 全体の基本文字サイズを大きめに */
+line-height: 1.9; /* 行間も少し広めに */
+}
+
+h2 {
+font-size: 24px; /* 見出しを少し大きく */
+}
+
+p {
+font-size: 16px; /* 説明文を読みやすく */
+line-height: 2;
+}
+
+.contact-bth {
+font-size: 16px; /* ボタン文字も大きく */
+}
+
+footer {
+font-size: 12px; /* フッター文字を少し大きく */
+}
+}
+
+
+@media (max-width: 768px) {
+.logo img {
+height: 70px;
+}
+}
